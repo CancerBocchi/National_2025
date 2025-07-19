@@ -1,3 +1,9 @@
+#ifndef __OLEDUI_H__
+#define __OLEDUI_H__
+
+
+
+
 #include "main.h"
 #include "oled.h"
 #include "stdbool.h"
@@ -36,9 +42,12 @@ void DrawCircleHelper(uint8_t,uint8_t, unsigned char , unsigned char);
 void DrawRoundRect(uint8_t , uint8_t , unsigned char w, unsigned char h, unsigned char r);
 void DrawfillRoundRect(uint8_t x, uint8_t y, unsigned char w, unsigned char h, unsigned char r);
 void DrawChar(uint8_t , uint8_t , unsigned char c,uint8_t size,uint8_t bg);
-void DrawString(uint8_t x, uint8_t y, char *str,uint8_t size);
+void DrawString(uint8_t x, uint8_t y, char *str,uint8_t size,uint8_t bg);
 void DrawNum(uint8_t x, uint8_t y, uint16_t num,uint8_t len,uint8_t size,uint8_t bg);
 void DrawHalfRoundRect(uint8_t x,uint8_t y,uint8_t w,uint8_t h,uint8_t direction);
 void DrawMYflaotRoundRect(int x, int y, uint8_t w, uint8_t h);
 void MY_FillRect(int x,int y,int width,int height);
 void OLED_ShowCHinese(uint8_t x,uint8_t y,uint8_t *cn);
+void DrawMYflaotRect(int x, int y, uint8_t w, uint8_t h);
+
+#endif // !__OLEDUI_H__

@@ -90,9 +90,7 @@ void task_init(){
     for(int i = 0;i<16;i++)
       ComKey_Init(&matrix_key[i],1);
 
-
-    
-
+    route_to(&(page_setting.page.page));
 
 }
 
@@ -141,9 +139,8 @@ void task_run(){
 
     extern uint8_t ScreenBuffer[8][128];
     memset(ScreenBuffer,0,1024); //Çå¿Õ»º³åÇø
-    char str[40];
-    sprintf(str,"pf:%.3f\nv_ref:%.3f\nc_ref:%.8f\n",measure.powerFactor,PFC.BusVol_pid->Ref,PFC.Current_Ref,PFC.BusVol_pid->Output);
-    DrawString(1,1,str,1);
+    
+    current_page->update_ui();
     
     flash();
     oled_tick = HAL_GetTick();

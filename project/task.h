@@ -23,6 +23,9 @@
 #include "comKey.h"
 #include "encoder.h"
 
+#include "page.h"
+#include "page_setting.h"
+
 #include "single_pfc.h"
 
 #include "SEGGER_RTT.h"

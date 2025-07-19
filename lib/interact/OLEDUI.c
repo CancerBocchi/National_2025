@@ -293,7 +293,7 @@ const uint8_t font5x7[]={
  */
 void flash()
 {
-    ;
+    
     // for(uint8_t i=0;i<8;i++)
     // {
     //     //sh1106
@@ -695,7 +695,7 @@ void DrawChar(uint8_t x, uint8_t y, unsigned char c,uint8_t size,uint8_t bg)
 }
 
 // 显示字符串 就是显示多次显示字符
-void DrawString(uint8_t x, uint8_t y, char *str,uint8_t size)
+void DrawString(uint8_t x, uint8_t y, char *str,uint8_t size,uint8_t bg)
 {
     unsigned char j = 0, tempx = x, tempy = y;
     while (str[j] != '\0')
@@ -707,7 +707,7 @@ void DrawString(uint8_t x, uint8_t y, char *str,uint8_t size)
             j++;
             continue;
         }
-        DrawChar(tempx, tempy, str[j],size,1);
+        DrawChar(tempx, tempy, str[j],size,bg);
         tempx += size * 6;
         j++;
     }   
