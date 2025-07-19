@@ -1,0 +1,116 @@
+{
+  "name": "single_pfc",
+  "type": "ARM",
+  "dependenceList": [],
+  "srcDirs": [
+    "Core/Src",
+    "Drivers/CMSIS/Device/ST/STM32G4xx/Source",
+    "Drivers/STM32G4xx_HAL_Driver/Src",
+    "lib",
+    "project",
+    "lib/alg",
+    "lib/interact",
+    "APP",
+    "lib/interact/page"
+  ],
+  "virtualFolder": {
+    "name": "<virtual_root>",
+    "files": [
+      {
+        "path": "startup_stm32g474xx.s"
+      },
+      {
+        "path": "../2023_National_A/Middlewares/ST/ARM/DSP/Lib/libarm_cortexM4lf_math.a"
+      }
+    ],
+    "folders": []
+  },
+  "outDir": "build",
+  "deviceName": null,
+  "packDir": null,
+  "miscInfo": {
+    "uid": "5ca6a4ad783e2354ff018a36e045bd92"
+  },
+  "targets": {
+    "Debug": {
+      "excludeList": [],
+      "toolchain": "GCC",
+      "compileConfig": {
+        "cpuType": "Cortex-M4",
+        "floatingPointHardware": "single",
+        "scatterFilePath": "STM32G474RBTx_FLASH copy.ld",
+        "useCustomScatterFile": true,
+        "storageLayout": {
+          "RAM": [],
+          "ROM": []
+        },
+        "options": "null",
+        "archExtensions": ""
+      },
+      "uploader": "JLink",
+      "uploadConfig": {
+        "bin": "",
+        "baseAddr": "",
+        "cpuInfo": {
+          "vendor": "ST",
+          "cpuName": "STM32G474RB"
+        },
+        "proType": 1,
+        "speed": 8000,
+        "otherCmds": ""
+      },
+      "uploadConfigMap": {},
+      "custom_dep": {
+        "name": "default",
+        "incList": [
+          "Core/Inc",
+          "Drivers/CMSIS/Include",
+          "Drivers/CMSIS/Device/ST/STM32G4xx/Include",
+          "Drivers/STM32G4xx_HAL_Driver/Inc",
+          "Drivers/STM32G4xx_HAL_Driver/Inc/Legacy",
+          "lib",
+          "project",
+          "Middlewares/ST/ARM/DSP/Inc",
+          "lib/alg",
+          "lib/interact",
+          "APP",
+          "lib/interact/page"
+        ],
+        "libList": [],
+        "defineList": [
+          "USE_HAL_DRIVER",
+          "STM32G474xx",
+          "ARM_MATH_CM4"
+        ]
+      },
+      "builderOptions": {
+        "GCC": {
+          "version": 5,
+          "beforeBuildTasks": [],
+          "afterBuildTasks": [],
+          "global": {
+            "$float-abi-type": "hard",
+            "output-debug-info": "enable",
+            "misc-control": "--specs=nosys.specs --specs=nano.specs"
+          },
+          "c/cpp-compiler": {
+            "language-c": "c11",
+            "language-cpp": "c++11",
+            "optimization": "level-debug",
+            "warnings": "all-warnings",
+            "one-elf-section-per-function": true,
+            "one-elf-section-per-data": true
+          },
+          "asm-compiler": {},
+          "linker": {
+            "output-format": "elf",
+            "remove-unused-input-sections": true,
+            "LIB_FLAGS": "-lm -u_printf_float",
+            "$toolName": "auto"
+          }
+        }
+      }
+    }
+  },
+  "version": "3.6"
+}
