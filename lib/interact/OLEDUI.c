@@ -1,11 +1,6 @@
 #include "OLEDUI.h"
 
-#define SCREEN_COLUMN 128
-#define SCREEN_ROW 64
-#define SCREEN_PAGE_NUM 8
-#define NUM_OFCHINESE   8
-#define MAX(x,y)  		((x)>(y)? (x):(y))
-#define MIN(x,y)  		((x)<(y)? (x):(y))
+
 
 uint8_t ScreenBuffer[8][128];
 static unsigned char _BitTableS[8]={0x01,0x03,0x07,0x0f,0x1f,0x3f,0x7f,0xff};

@@ -9,6 +9,13 @@
 #include "stdbool.h"
 #include "string.h"
 
+#define SCREEN_COLUMN 128
+#define SCREEN_ROW 64
+#define SCREEN_PAGE_NUM 8
+#define NUM_OFCHINESE   8
+#define MAX(x,y)  		((x)>(y)? (x):(y))
+#define MIN(x,y)  		((x)<(y)? (x):(y))
+
 typedef struct COORDINATE 
 {
 	int x;

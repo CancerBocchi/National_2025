@@ -2,39 +2,30 @@
 #define __PAGE_SETTING_H__
 
 #include "keyboard_page.h"
-
-#define PARA_NUM 2
+#include "page_showPara.h"
 
 #define PARA_TYPE_INT 0
 #define PARA_TYPE_FLOAT 1
 
-typedef struct{
+#define SETTING_PAGE_INPUT_CHAR_MAX 8
 
-    uint16_t x;
-    uint16_t y;
-    uint16_t blank; //显示值和名称之间的距离
-
-    char name[20];
-    void* para;
-    uint8_t type;
-
-}UI_Para_t;
-
-typedef struct{
-    int key_num;
-    char key_char;
-}Input_Key_t;
 
 typedef struct{
 
     keyboard_pagebase page;
-    char input_value[10];
+
+    char input_value[SETTING_PAGE_INPUT_CHAR_MAX+1];
+    uint8_t input_index;
+    
     UI_Para_t *para;
+    uint8_t para_index;
 
     enum{
         STATE_PARA_SEL,
         STATE_INPUT,
     }state;
+
+    uint8_t check_flag;
 
 
 }page_setting_t;

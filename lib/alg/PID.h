@@ -42,5 +42,6 @@ void Pos_PID_Init(Pos_PID_t* plant,float Kp,float Ki,float Kd);
 void Step_PID_Init(Step_PID_t* plant,float Kp,float Ki,float Kd);
 float Pos_PID_Controller(Pos_PID_t* plant ,float ValueCurrent);
 float Step_PID_Controller(Step_PID_t* plant,float ValueCurrent);
+void Pos_PID_Reset(Pos_PID_t* plant);
 
 #endif

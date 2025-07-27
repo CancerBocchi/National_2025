@@ -19,7 +19,20 @@
             "*.cpp": "cpp",
             "*.cxx": "cpp",
             "*.cc": "cpp",
-            "cmath": "c"
+            "cmath": "c",
+            "sstream": "c",
+            "bit": "c",
+            "charconv": "c",
+            "compare": "c",
+            "condition_variable": "c",
+            "cstddef": "c",
+            "string": "c",
+            "optional": "c",
+            "limits": "c",
+            "memory": "c",
+            "new": "c",
+            "ranges": "c",
+            "functional": "c"
         },
         "[yaml]": {
             "editor.insertSpaces": true,

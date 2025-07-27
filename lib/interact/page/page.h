@@ -13,6 +13,22 @@
 
 #define screen_height 64
 
+
+typedef struct{
+
+    uint16_t x;
+    uint16_t y;
+    uint16_t blank; //显示值和名称之间的距离
+
+    char name[20];
+    void* para;
+    uint8_t type;
+
+    float max;
+    float min;
+
+}UI_Para_t;
+
 typedef struct
 {
     void (*page)(void);//进入页面才执行一次该函数，配置UI和指针

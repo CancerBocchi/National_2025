@@ -59,3 +59,12 @@ float Step_PID_Controller(Step_PID_t* plant,float ValueCurrent)
 	
 	return plant->Output;
 }
+
+void Pos_PID_Reset(Pos_PID_t* plant){
+	plant->Error = 0;
+	plant->Value_I = 0;
+	plant->Value_D = 0;
+	plant->Past_Error = 0;
+	plant->Output = 0;
+
+}
